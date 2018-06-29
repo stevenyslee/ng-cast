@@ -1,4 +1,7 @@
 angular.module('video-player')
+
+// import {exampleVideoData} from 'src/data/exampleVideoData.js';
+
 .component('videoList', {
-  // TODO
+  templateUrl: 'src/templates/videoList.html'
 });
