@@ -11,13 +11,7 @@ angular.module('video-player')
     controller: function() {
     
     },
-  
-    template:
-  `<ul class="video-list" >
-    <video-list-entry
-      on-click="$ctrl.onClick"
-      video="data"
-      ng-repeat="data in $ctrl.videos"
-    />
-  </ul>`
+    
+    templateUrl: 'src/templates/videoList.html'
+
   });
