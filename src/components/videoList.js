@@ -3,5 +3,19 @@ angular.module('video-player')
 // import {exampleVideoData} from 'src/data/exampleVideoData.js';
 
 .component('videoList', {
-  templateUrl: 'src/templates/videoList.html'
+  bindings: {
+    videos: '<'
+  },
+  
+  controller: function() {
+    
+  },
+  
+  template:
+  `<ul class="video-list" >
+    <video-list-entry
+      video="data"
+      ng-repeat="data in $ctrl.videos"
+    />
+  </ul>`
 });
