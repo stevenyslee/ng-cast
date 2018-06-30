@@ -1,6 +1,7 @@
 angular.module('video-player')
   .component('app', {
     bindings: {
+      
     },
   
     controller: function() {
@@ -11,8 +12,9 @@ angular.module('video-player')
         this.currentVideo = video;
       };
       
-      this.searchResults = () => {
-        
+      this.searchResults = (videos) => {
+        this.currentVideo = videos[0];
+        this.videos = videos;
       };
       
     },
@@ -22,7 +24,7 @@ angular.module('video-player')
     `<div id="app container">
       <nav class="navbar">
         <div class="col-md-6 col-md-offset-3">
-          <search />
+          <search search-results=$ctrl.searchResults />
         </div>
       </nav>
       <div class="row">
