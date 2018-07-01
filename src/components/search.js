@@ -5,9 +5,7 @@ angular.module('video-player')
       searchResults: '<'
     },
   
-    controller: function($scope, youTube) {
-      this.input = '';
-      
+    controller: function($scope, youTube) {      
       this.result = () => {
         youTube.search(5, this.input, this.searchResults);
       };
